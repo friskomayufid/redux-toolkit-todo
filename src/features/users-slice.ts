@@ -12,7 +12,7 @@ const initialState: UsersState = {
 
 type DraftUser = RequireOnly<User, 'realName' | 'alterEgo'>;
 
-const createUser = (draftUser: DraftUser): User => {
+export const createUser = (draftUser: DraftUser): User => {
   return { id: nanoid(), tasks: [], ...draftUser };
 };
 
